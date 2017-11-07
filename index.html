@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html lang="eng">
-  <head>
-    <meta charset="utf-8">
-    <title>BMI Calculator</title>
-    <script src="src/person.js"></script>
-    <script src="src/bmi_calculator.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Welcome to the BMI Calculator!</h1>
-      <p>
-        Here you can enter your weight in kilograms and your height in centimeters to determine
-        your BMI(body mass index).
-      </p>
-    <form>
-      <input type="text" id="weight" placeholder="Weight (kg)">
-      <input type="text" id="height" placeholder="Height (cm)">
-      <input type="button" id="calculate" value="Calculate">
-    </form>
-    <div>
-      <span id="display_value"></span>
-      <span id="display_message"></span>
 
-    </div>
+<head>
+  <meta charset="utf-8">
+  <title>BMI Calculator</title>
+  <script src="src/person.js"></script>
+  <script src="src/bmi_calculator.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Welcome to the BMI Calculator!</h1>
+  <p>
+    Here you can enter your weight in kilograms and your height in centimeters to determine your BMI(body mass index).
+  </p>
+  <form>
+    <input type="text" id="weight" placeholder="Weight (kg)">
+    <input type="text" id="height" placeholder="Height (cm)">
+    <input type="button" id="calculate" value="Calculate">
+  </form>
+  <div>
+    <span id="display_value"></span>
+    <span id="display_message"></span>
+
+  </div>
+  <div>
+    <h2>BMI Weight Status Categories</h2>
     <p>
       Below you will find the graph of how you BMI is classed.
     </p>
-    <script type="text/javascript">
+  </div>
+  <table style="width:100%">
+    <tr>
+      <th>BMI</th>
+      <th>Weight Status</th>
+    </tr>
+    <tr>
+      <td>Below 18.5</td>
+      <td>Underweight</td>
+    </tr>
+    <tr>
+      <td>Below 18.5 - 24.9</td>
+      <td>Normal</td>
+    </tr>
+    <tr>
+      <td>Below 25 - 29.9</td>
+      <td>Overweight</td>
+    </tr>
+    <tr>
+      <td>Over 30.0</td>
+      <td>Obese</td>
+    </tr>
+  </table>
+  <script type="text/javascript">
     $(document).ready(function() {
       $('#calculate').click(function() {
         var w = parseFloat($('#weight').val());
         var h = parseFloat($('#height').val());
-        var person = new Person({weight: w, height: h});
+        var person = new Person({
+          weight: w,
+          height: h
+        });
         person.calculate_bmi();
         $('#display_value').html('Your BMI is ' + person.bmiValue);
         $('#display_message').html('and you are ' + person.bmiMessage);
       });
     });
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>

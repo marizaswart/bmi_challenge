@@ -13,22 +13,29 @@
 <body>
   <h1>Welcome to the BMI Calculator!</h1>
   <p>
-    Here you can enter your weight in kilograms and your height in centimeters to determine your BMI(body mass index).
+    Enter your weight and height below to determine your BMI (body mass index).</p>
+  <p>
+    You can select if you would like to use the metric (kg, cm) system or imperial (pounds, inches) system.
   </p>
+  <form action="">
+    <select>
+      <option value="metric" selected="selected">Metric System</option>
+      <option value="imperial">Imperial System</option>
+    </select>
+  </form>
   <form>
-    <input type="text" id="weight" placeholder="Weight (kg)">
-    <input type="text" id="height" placeholder="Height (cm)">
+    <input type="text" id="weight" placeholder="Weight">
+    <input type="text" id="height" placeholder="Height">
     <input type="button" id="calculate" value="Calculate">
   </form>
   <div>
     <span id="display_value"></span>
     <span id="display_message"></span>
-
   </div>
   <div>
     <h2>BMI Weight Status Categories</h2>
     <p>
-      Below you will find the graph of how you BMI is classed.
+      Below you will find the graph of how your BMI is classed.
     </p>
   </div>
   <table style="width:100%">

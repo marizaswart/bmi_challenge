@@ -8,9 +8,14 @@
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   </head>
   <body>
+    <h1>Welcome to the BMI Calculator!</h1>
+      <p>
+        Here you can enter your weight in kilograms and your height in centimeters to determine
+        your BMI(body mass index).
+      </p>
     <form>
-      <input type="text" id="weight" placeholder="Weight">
-      <input type="text" id="height" placeholder="Height">
+      <input type="text" id="weight" placeholder="Weight (kg)">
+      <input type="text" id="height" placeholder="Height (cm)">
       <input type="button" id="calculate" value="Calculate">
     </form>
     <div>
@@ -18,6 +23,9 @@
       <span id="display_message"></span>
 
     </div>
+    <p>
+      Below you will find the graph of how you BMI is classed.
+    </p>
     <script type="text/javascript">
     $(document).ready(function() {
       $('#calculate').click(function() {

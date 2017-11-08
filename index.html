@@ -17,12 +17,11 @@
   <p>
     You can select if you would like to use the metric (kg, cm) system or imperial (pounds, inches) system.
   </p>
-  <form action="">
-    <select>
-      <option value="metric" selected="selected">Metric System</option>
+
+    <select id="mySelect" onchange="selector()">
+      <option value="Metric System">Metric System</option>
       <option value="imperial">Imperial System</option>
     </select>
-  </form>
   <form>
     <input type="text" id="weight" placeholder="Weight">
     <input type="text" id="height" placeholder="Height">

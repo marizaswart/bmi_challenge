@@ -1,21 +1,25 @@
+function selector(obj) {
+  var selection = document.getElementById('mySelect').value;
+  document.addEventListener("onchange", BMICalculator);
+}
+
+
 function BMICalculator() {
 
 }
+
 BMICalculator.prototype.metric_bmi = function(obj) {
     var weight = obj.weight;
     var height = obj.height;
     if (weight > 0 && height > 0) {
-      var selector = document.getElementByValue("metric");
-      selector.addEventListener("click", function(obj) {
-          if (this.value == "metric") {
-            var finalBmi = weight / (height / 100 * height / 100);
-            obj.bmiValue = parseFloat(finalBmi.toFixed(2));
-          } else {
-            var finalBmiImp = (weight * 703) / (height * height);
+        if (mySelect.value == "Metric System") {
+          var finalBmi = weight / (height / 100 * height / 100);
+          obj.bmiValue = parseFloat(finalBmi.toFixed(2));
+        } else {
+          var finalBmiImp = (weight * 703) / (height * height);
             obj.bmiValue = parseFloat(finalBmiImp.toFixed(2));
           }
-          setBMIMessage(obj);
-        });
+        setBMIMessage(obj);
       }
     };
 

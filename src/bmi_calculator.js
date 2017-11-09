@@ -11,7 +11,7 @@ BMICalculator.prototype.metric_bmi = function(obj) {
     var weight = obj.weight;
     var height = obj.height;
     if (weight > 0 && height > 0) {
-        if (mySelect.value == "Metric System") {
+        if ($('mySelect').val('Metric System')) {
           var finalBmi = weight / (height / 100 * height / 100);
           obj.bmiValue = parseFloat(finalBmi.toFixed(2));
         } else {

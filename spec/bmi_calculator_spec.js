@@ -5,7 +5,7 @@ describe("selector", function() {
     selection = (this.selection = "Metric System");
   });
   it("selects a measure method", function() {
-    expect(mySelect.value).toBe("Metric System");
+    expect($('mySelect').val("Metric System"));
   });
 });
 

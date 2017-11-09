@@ -10,7 +10,7 @@ describe('BMI_UI - index.html', function() {
   });
 
   it("selects a method to calculate", function() {
-    expect($('#mySelect').attr()).toBe('Metric System');
+    expect($('#mySelect').val()).toBe('Metric System');
   });
 
   it("displays BMI Value", function() {

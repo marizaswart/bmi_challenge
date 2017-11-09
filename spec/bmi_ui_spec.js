@@ -3,14 +3,14 @@ describe('BMI_UI - index.html', function() {
     jasmine.getFixtures().fixturesPath = '.';
     loadFixtures('index.html');
     $.holdReady(false);
-    $('#mySelect').trigger('Metric System');
+    $('#my-select').val('metric');
     $('#weight').val('90');
     $('#height').val('186');
     $('#calculate').trigger('click');
   });
 
   it("selects a method to calculate", function() {
-    expect($('#mySelect').val()).toBe('Metric System');
+    expect($('#my-select').val()).toBe('metric');
   });
 
   it("displays BMI Value", function() {

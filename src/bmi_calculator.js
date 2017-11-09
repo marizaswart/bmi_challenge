@@ -1,5 +1,5 @@
 function selector(obj) {
-  var selection = document.getElementById('mySelect').value;
+  var selection = document.getElementById('my-select').value;
   document.addEventListener("onchange", BMICalculator);
 }
 
@@ -7,11 +7,11 @@ function BMICalculator() {
 
 }
 
-BMICalculator.prototype.metric_bmi = function(obj) {
+BMICalculator.prototype.body_bmi = function(obj, method) {
     var weight = obj.weight;
     var height = obj.height;
     if (weight > 0 && height > 0) {
-        if (mySelect.value == 'Metric System') {
+        if (method == 'metric') {
           var finalBmi = weight / (height / 100 * height / 100);
           obj.bmiValue = parseFloat(finalBmi.toFixed(2));
         } else {

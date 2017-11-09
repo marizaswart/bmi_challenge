@@ -1,15 +1,3 @@
-describe("selector", function() {
-  var selection;
-
-  beforeEach(function() {
-    selection = (this.selection = "Metric System");
-  });
-  
-  it("selects a measure method", function() {
-    expect($('mySelect').val("Metric System"));
-  });
-});
-
 describe("BMICalculator", function() {
   var calculator;
   var person;
@@ -20,7 +8,7 @@ describe("BMICalculator", function() {
   });
 
   it("calculates BMI for a person using metric method", function() {
-    calculator.metric_bmi(person);
+    calculator.body_bmi(person, 'metric');
     expect(person.bmiValue).toEqual(26.01);
   });
 });

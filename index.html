@@ -12,33 +12,40 @@
 </head>
 
 <body>
-  <h1>Welcome to the BMI Calculator!</h1>
+  <div class="jumbotron">
+  <h1 class="page-header">Welcome to the BMI Calculator!</h1>
+    <p class="lead">Enter your weight and height below to determine your BMI (body mass index).</p>
+  </div>
   <div class="container">
-    <p>Enter your weight and height below to determine your BMI (body mass index).</p>
     <p>You can select if you would like to use the metric (kg, cm) system or imperial (pounds, inches) system.
     </p>
   </div>
-
-    <select id="mySelect" onchange="selector()">
+  <div class="container">
+    <select id="mySelect" onchange="selector()" class="form-control">
       <option value="Metric System">Metric System</option>
       <option value="Imperial System">Imperial System</option>
     </select>
+    <br />
   <form>
     <input type="text" id="weight" placeholder="Weight">
     <input type="text" id="height" placeholder="Height">
-    <input type="button" id="calculate" value="Calculate">
+    <input type="button" id="calculate" class="btn btn-success btn-sm" value="Calculate">
   </form>
-  <div>
+  </div>
+  <div class="container">
     <span id="display_value"></span>
     <span id="display_message"></span>
   </div>
-  <div>
+  <br /><br />
+  <div class="container">
     <h2>BMI Weight Status Categories</h2>
     <p>
       Below you will find the graph of how your BMI is classed.
     </p>
   </div>
-  <table>
+  <br />
+  <div class="container">
+  <table class="table table-bordered table-hover">
     <tr>
       <th>BMI</th>
       <th>Weight Status</th>
@@ -60,6 +67,7 @@
       <td>Obese</td>
     </tr>
   </table>
+</div>
   <script src="src/script.js" charset="utf-8"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

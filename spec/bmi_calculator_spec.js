@@ -4,6 +4,7 @@ describe("selector", function() {
   beforeEach(function() {
     selection = (this.selection = "Metric System");
   });
+  
   it("selects a measure method", function() {
     expect($('mySelect').val("Metric System"));
   });

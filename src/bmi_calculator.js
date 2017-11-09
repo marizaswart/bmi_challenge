@@ -3,7 +3,6 @@ function selector(obj) {
   document.addEventListener("onchange", BMICalculator);
 }
 
-
 function BMICalculator() {
 
 }
